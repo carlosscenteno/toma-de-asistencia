@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+
+    <title>Insertar Datos PHP</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="abs-center">
+
+        <h2 class="w-100 text-center mb-4">Registre los usuarios</h2>
+
+        <hr style="color: #9999" />
+
+        <form class="form-horizontal" id="formulario" method="POST">
+            
+           
+             <div class="col-xs-3">
+                <label for="fecha" class="form-label">Fecha</label>
+                <input type="date" class="form-control" id="fecha" name="fecha" placeholder="Ingrese la fecha" required="">
+            </div>
+           
+
+            <div class="mb-3">
+                <label for="hora" class="form-label">Hora</label>
+                <input type="time" class="form-control" id="hora" name="hora" placeholder="Ingrese la hora" required="">
+            </div>
+
+                <div class="mb-3">
+                <label for="tipo" class="col-xs-4 control-label">Evento:</label>
+                <div class="col-xs-3">
+                  <select class="form-control input-sm col-xs-1 " id="tipo" name="tipo">
+                      <option value="selecione">selecione</option>
+                      <option value="cultoespecial">culto especial</option>
+                      <option value="escueladominical">escuela dominical</option>
+                      <option value="campania">campaña</option>
+                      <option value="cultodorcas">culto dorcas</option>
+                      <option value="cultocaballero">culto caballero</option>
+                      <option value="ayuno">ayuno</option>
+                      <option value="matutino">matutino</option>
+            
+                  </select>
+                </div>
+                
+              </div>
+
+              <div class="mb-3">
+                <label for="hermanos_fi" class="form-label">fila 1:</label>
+                <input type="number"  size=40 style="width:70px" class="monto" onchange="sumar();" id="hermanos_fi" name="hermanos_fi" placeholder="hermanos" required="">
+                
+
+                
+                <label for="visitas_fi" class="form-label"></label> 
+                <input type="number" size=40 style="width:70px" class="monto" onchange="sumar();" id="visitas_fi" name="visitas_fi" placeholder="visitas" required="">
+                
+
+                
+                <label for="ninos_fi" class="form-label"></label>
+                <input type="number" size=40 style="width:70px" class="monto" onchange="sumar();" id="ninos_fi" name="ninos_fi" placeholder="niños" required="">
+                </div>
+
+            <div class="mb-3">
+                <label for="hermanos_fii" class="form-label">fila 2:</label>
+                <input type="number" size=40 style="width:70px" class="monto" onchange="sumar();" id="hermanos_fii"  name="hermanos_fii" placeholder="hermanos" required="">
+                
+
+                
+                <label for="visitas_fii" class="form-label"></label>
+                <input type="number" size=40 style="width:70px" class="monto" onchange="sumar();" id="visitas_fii"  name="visitas_fii" placeholder="visitas" required="">
+              
+
+               
+                <label for="ninos_fii" class="form-label"></label>
+                <input type="number" size=40 style="width:70px" class="monto" onchange="sumar();" id="ninos_fii"  name="ninos_fii" placeholder="niños" required="">
+                </div>
+
+                <div class="mb-3">
+                <label for="hermanos_fiii" class="form-label">fila 3:</label>
+                <input type="number" size=40 style="width:70px" class="monto" onchange="sumar();" id="hermanos_fiii" name="hermanos_fiii" placeholder="hermanos" required="">
+                
+
+                
+                <label for="visitas_fiii" class="form-label"></label>
+                <input type="number" size=40 style="width:70px" class="monto" onchange="sumar();" id="visitas_fiii" name="visitas_fiii" placeholder="visitas" required="">
+                
+
+                
+                <label for="ninos_fiii" class="form-label"></label>
+                <input type="number" size=40 style="width:70px" class="monto" onchange="sumar();" id="ninos_fiii" name="ninos_fiii" placeholder="niños" required="">
+                 </div>
+
+            <div class="mb-3">
+                <label for="total_hermanos" class="form-label">Total Asistencia:</label>
+                <input type="number" class="form-control" id="total_hermanos" name="total_hermanos" readonly="readonly" >
+            </div>
+
+              
+          
+              <button type="submit" class="btn btn-primary w-100 text-uppercase fw-bold">Insertar</button>
+              <br>
+              <br>
+              <button type="reset" value="limpiar" class="btn btn-danger w-100 text-uppercase fw-bold">limpiar</button>
+        
+    
+
+        </form>
+      
+
+    </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="js/sumar.js"></script>
+
+</body>
+</html>
